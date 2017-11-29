@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8"/>
+  <title>
+   03 Customizing Visual Appearance — PyViz 0.0.1 documentation
+  </title>
+  <meta content="How to solve visualization problems with Python tools." name="description"/>
+  <meta content="PyViz authors" name="author"/>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js">
+  </script>
+  <script>
+   WebFont.load({
+      google: {
+        families: ['Source Sans Pro']
+      }
+    });
+  </script>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../_static/css/main.css" rel="stylesheet"/>
+  <link href="../_static/nbsite.css" rel="stylesheet"/>
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+  </script>
+  <script src="../_static/js/main.js">
+  </script>
+  <script src="../_static/nbsite.js">
+  </script>
+  <script src="../_static/require.js">
+  </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../_static/favicon.ico" rel="icon" type="image/png"/>
+  <!-- Canonical
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="/tutorial/03_Customizing_Visual_Appearance.html" rel="canonical"/>
+ </head>
+ <body class="">
+  <header class="navigation">
+   <div class="wrapper">
+    <a class="logo" href="../index.html">
+     <img alt="Logo" src="../_static/pyviz-logo.png"/>
+    </a>
+    <a class="navigation-menu logo-text" href="../index.html">
+     PyViz
+    </a>
+    <a class="navigation-menu-button" href="javascript:void(0)" id="js-mobile-menu">
+     Menu
+    </a>
+    <nav>
+     <ul class="navigation-menu show" id="js-navigation-menu">
+      <li class="nav-link">
+       <a href="index.html">
+        Tutorial
+       </a>
+      </li>
+      <li class="nav-link">
+       <a href="../FAQ.html">
+        FAQ
+       </a>
+      </li>
+      <li class="nav-link">
+       <a href="../about.html">
+        About
+       </a>
+      </li>
+      <li class="nav-link">
+       <div style="display:inline-block;vertical-align: middle;">
+        <div class="search-bar">
+         <form action="../search.html" method="get" role="search">
+          <input name="q" placeholder="Search" type="search"/>
+          <button type="submit">
+           <img alt="Search Icon" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png"/>
+          </button>
+         </form>
+        </div>
+       </div>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <!-- MAIN BODY OF DOCS –––––––––––––––––– -->
+  <div class="docs section">
+   <div id="hacketyhackhack">
+    <!-- style="width:20%;margin-right: 100px;"> -->
+    <!--style="display: none;"> style="display:none;"> -->
+    <div class="toc" style="width:15%; margin-right:20px;">
+     <ul class="current">
+      <li class="toctree-l1">
+       <a class="reference internal" href="../index.html">
+        Introduction
+       </a>
+      </li>
+      <li class="toctree-l1 current">
+       <a class="reference internal" href="index.html">
+        Tutorial
+       </a>
+       <ul class="current">
+        <li class="toctree-l2">
+         <a class="reference internal" href="00_Welcome.html">
+          00 Welcome
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="01_Workflow_Introduction.html">
+          01 Workflow Introduction
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="02_Annotating_Data.html">
+          02 Annotating Data
+         </a>
+        </li>
+        <li class="toctree-l2 current">
+         <a class="current reference internal" href="#">
+          03 Customizing Visual Appearance
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="04_Working_with_Datasets.html">
+          04 Working with Datasets
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="05_Working_with_Gridded_Data.html">
+          05 Working with Gridded Data
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="06_Network_Graphs.html">
+          06 Network Graphs
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="07_Geographic_Data.html">
+          07 Geographic Data
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="08_Custom_Interactivity.html">
+          08 Custom Interactivity
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="09_Operations_and_Pipelines.html">
+          09 Operations and Pipelines
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="10_Working_with_Large_Datasets.html">
+          10 Working with Large Datasets
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="11_Streaming_Data.html">
+          11 Streaming Data
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="12_Parameters_and_Widgets.html">
+          12 Parameters and Widgets
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="13_Deploying_Bokeh_Apps.html">
+          13 Deploying Bokeh Apps
+         </a>
+        </li>
+        <li class="toctree-l2">
+         <a class="reference internal" href="A1_Exploration_with_Containers.html">
+          Appendix 1 Exploration with Containers
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l1">
+       <a class="reference internal" href="../FAQ.html">
+        FAQ
+       </a>
+      </li>
+      <li class="toctree-l1">
+       <a class="reference internal" href="../about.html">
+        About
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="content">
+    <!-- style="max-width:80%;margin-left:auto;margin-right: auto;">-->
+    <div class="section" id="customizing-visual-appearance">
+     <h1>
+      03 Customizing Visual Appearance
+      <a class="headerlink" href="#customizing-visual-appearance" title="Permalink to this headline">
+       ¶
+      </a>
+     </h1>
+     Notebook conversion failed with the following traceback: 
+An error occurred while executing the following cell:
+------------------
+%%output fig='png' filename='diamonds'
+scatter
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mWebDriverException[0m                        Traceback (most recent call last)
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/IPython/core/formatters.py[0m in [0;36m__call__[0;34m(self, obj)[0m
+[1;32m    339[0m                 [0;32mpass[0m[0;34m[0m[0m
+[1;32m    340[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--&gt; 341[0;31m                 [0;32mreturn[0m [0mprinter[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    342[0m             [0;31m# Finally look for special method names[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    343[0m             [0mmethod[0m [0;34m=[0m [0mget_real_method[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mprint_method[0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/ipython/display_hooks.py[0m in [0;36mpprint_display[0;34m(obj)[0m
+[1;32m    257[0m     [0;32mif[0m [0;32mnot[0m [0mip[0m[0;34m.[0m[0mdisplay_formatter[0m[0;34m.[0m[0mformatters[0m[0;34m[[0m[0;34m'text/plain'[0m[0;34m][0m[0;34m.[0m[0mpprint[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    258[0m         [0;32mreturn[0m [0;32mNone[0m[0;34m[0m[0m
+[0;32m--&gt; 259[0;31m     [0;32mreturn[0m [0mdisplay[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mraw[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    260[0m [0;34m[0m[0m
+[1;32m    261[0m [0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/ipython/display_hooks.py[0m in [0;36mdisplay[0;34m(obj, raw, **kwargs)[0m
+[1;32m    237[0m     [0;32melif[0m [0misinstance[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0;34m([0m[0mCompositeOverlay[0m[0;34m,[0m [0mViewableElement[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    238[0m         [0;32mwith[0m [0moption_state[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--&gt; 239[0;31m             [0mhtml[0m [0;34m=[0m [0melement_display[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    240[0m     [0;32melif[0m [0misinstance[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0;34m([0m[0mLayout[0m[0;34m,[0m [0mNdLayout[0m[0;34m,[0m [0mAdjointLayout[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    241[0m         [0;32mwith[0m [0moption_state[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/ipython/display_hooks.py[0m in [0;36mwrapped[0;34m(element)[0m
+[1;32m    130[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    131[0m             html = fn(element,
+[0;32m--&gt; 132[0;31m                       max_frames=OutputSettings.options['max_frames'])
+[0m[1;32m    133[0m [0;34m[0m[0m
+[1;32m    134[0m             [0;31m# Only want to add to the archive for one display hook...[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/ipython/display_hooks.py[0m in [0;36melement_display[0;34m(element, max_frames)[0m
+[1;32m    176[0m     [0;32mif[0m [0mrenderer[0m[0;34m.[0m[0mfig[0m [0;34m==[0m [0;34m'pdf'[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    177[0m         [0mrenderer[0m [0;34m=[0m [0mrenderer[0m[0;34m.[0m[0minstance[0m[0;34m([0m[0mfig[0m[0;34m=[0m[0;34m'png'[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m--&gt; 178[0;31m     [0;32mreturn[0m [0mrenderer[0m[0;34m.[0m[0mhtml[0m[0;34m([0m[0melement[0m[0;34m,[0m [0mfmt[0m[0;34m=[0m[0mrenderer[0m[0;34m.[0m[0mfig[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    179[0m [0;34m[0m[0m
+[1;32m    180[0m [0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/plotting/renderer.py[0m in [0;36mhtml[0;34m(self, obj, fmt, css, comm, **kwargs)[0m
+[1;32m    257[0m         """
+[1;32m    258[0m         [0mplot[0m[0;34m,[0m [0mfmt[0m [0;34m=[0m  [0mself[0m[0;34m.[0m[0m_validate[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mfmt[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m--&gt; 259[0;31m         [0mfigdata[0m[0;34m,[0m [0m_[0m [0;34m=[0m [0mself[0m[0;34m([0m[0mplot[0m[0;34m,[0m [0mfmt[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    260[0m         [0;32mif[0m [0mcss[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m [0mcss[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcss[0m[0;34m[0m[0m
+[1;32m    261[0m [0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/holoviews/plotting/bokeh/renderer.py[0m in [0;36m__call__[0;34m(self, obj, fmt, doc)[0m
+[1;32m     90[0m         [0;32melif[0m [0mfmt[0m [0;34m==[0m [0;34m'png'[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m     91[0m             [0;32mfrom[0m [0mbokeh[0m[0;34m.[0m[0mio[0m[0;34m.[0m[0mexport[0m [0;32mimport[0m [0mget_screenshot_as_png[0m[0;34m[0m[0m
+[0;32m---&gt; 92[0;31m             [0mimg[0m [0;34m=[0m [0mget_screenshot_as_png[0m[0;34m([0m[0mplot[0m[0;34m.[0m[0mstate[0m[0;34m,[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m     93[0m             [0mimgByteArr[0m [0;34m=[0m [0mBytesIO[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[1;32m     94[0m             [0mimg[0m[0;34m.[0m[0msave[0m[0;34m([0m[0mimgByteArr[0m[0;34m,[0m [0mformat[0m[0;34m=[0m[0;34m'PNG'[0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/bokeh/util/api.py[0m in [0;36mwrapper[0;34m(*args, **kw)[0m
+[1;32m    188[0m         [0;34m@[0m[0mwraps[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    189[0m         [0;32mdef[0m [0mwrapper[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--&gt; 190[0;31m             [0;32mreturn[0m [0mobj[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    191[0m [0;34m[0m[0m
+[1;32m    192[0m         [0mwrapper[0m[0;34m.[0m[0m__bkversion__[0m [0;34m=[0m [0mversion[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/bokeh/io/export.py[0m in [0;36mget_screenshot_as_png[0;34m(obj, driver, **kwargs)[0m
+[1;32m    177[0m     [0mweb_driver[0m[0;34m.[0m[0mexecute_script[0m[0;34m([0m[0;34m"document.body.style.width = '100%';"[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    178[0m [0;34m[0m[0m
+[0;32m--&gt; 179[0;31m     [0mwait_until_render_complete[0m[0;34m([0m[0mweb_driver[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    180[0m [0;34m[0m[0m
+[1;32m    181[0m     [0mpng[0m [0;34m=[0m [0mweb_driver[0m[0;34m.[0m[0mget_screenshot_as_png[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/bokeh/util/api.py[0m in [0;36mwrapper[0;34m(*args, **kw)[0m
+[1;32m    188[0m         [0;34m@[0m[0mwraps[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    189[0m         [0;32mdef[0m [0mwrapper[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--&gt; 190[0;31m             [0;32mreturn[0m [0mobj[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    191[0m [0;34m[0m[0m
+[1;32m    192[0m         [0mwrapper[0m[0;34m.[0m[0m__bkversion__[0m [0;34m=[0m [0mversion[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/bokeh/io/export.py[0m in [0;36mwait_until_render_complete[0;34m(driver)[0m
+[1;32m    251[0m     [0;32mfrom[0m [0mselenium[0m[0;34m.[0m[0mcommon[0m[0;34m.[0m[0mexceptions[0m [0;32mimport[0m [0mTimeoutException[0m[0;34m[0m[0m
+[1;32m    252[0m [0;34m[0m[0m
+[0;32m--&gt; 253[0;31m     [0mdriver[0m[0;34m.[0m[0mexecute_script[0m[0;34m([0m[0m_WAIT_SCRIPT[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    254[0m [0;34m[0m[0m
+[1;32m    255[0m     [0;32mdef[0m [0mis_bokeh_render_complete[0m[0;34m([0m[0mdriver[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py[0m in [0;36mexecute_script[0;34m(self, script, *args)[0m
+[1;32m    463[0m         return self.execute(Command.EXECUTE_SCRIPT, {
+[1;32m    464[0m             [0;34m'script'[0m[0;34m:[0m [0mscript[0m[0;34m,[0m[0;34m[0m[0m
+[0;32m--&gt; 465[0;31m             'args': converted_args})['value']
+[0m[1;32m    466[0m [0;34m[0m[0m
+[1;32m    467[0m     [0;32mdef[0m [0mexecute_async_script[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mscript[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py[0m in [0;36mexecute[0;34m(self, driver_command, params)[0m
+[1;32m    234[0m         [0mresponse[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcommand_executor[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0mdriver_command[0m[0;34m,[0m [0mparams[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    235[0m         [0;32mif[0m [0mresponse[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--&gt; 236[0;31m             [0mself[0m[0;34m.[0m[0merror_handler[0m[0;34m.[0m[0mcheck_response[0m[0;34m([0m[0mresponse[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    237[0m             response['value'] = self._unwrap_value(
+[1;32m    238[0m                 response.get('value', None))
+
+[0;32m~/miniconda/envs/pyviz/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py[0m in [0;36mcheck_response[0;34m(self, response)[0m
+[1;32m    190[0m         [0;32melif[0m [0mexception_class[0m [0;34m==[0m [0mUnexpectedAlertPresentException[0m [0;32mand[0m [0;34m'alert'[0m [0;32min[0m [0mvalue[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    191[0m             [0;32mraise[0m [0mexception_class[0m[0;34m([0m[0mmessage[0m[0;34m,[0m [0mscreen[0m[0;34m,[0m [0mstacktrace[0m[0;34m,[0m [0mvalue[0m[0;34m[[0m[0;34m'alert'[0m[0;34m][0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m'text'[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m--&gt; 192[0;31m         [0;32mraise[0m [0mexception_class[0m[0;34m([0m[0mmessage[0m[0;34m,[0m [0mscreen[0m[0;34m,[0m [0mstacktrace[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    193[0m [0;34m[0m[0m
+[1;32m    194[0m     [0;32mdef[0m [0m_value_or_default[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mobj[0m[0;34m,[0m [0mkey[0m[0;34m,[0m [0mdefault[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;31mWebDriverException[0m: Message: {"errorMessage":"'undefined' is not an object (evaluating 'window.Bokeh.documents')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"349","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:49159","User-Agent":"Python-urllib/3.6"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"\\n// add private window prop to check that render is complete\\nwindow._bokeh_render_complete = false;\\nfunction done() {\\n  window._bokeh_render_complete = true;\\n}\\n\\nvar doc = window.Bokeh.documents[0];\\n\\nif (doc.is_idle)\\n  done();\\nelse\\n  doc.idle.connect(done);\\n\", \"args\": [], \"sessionId\": \"3d3b2140-d4f9-11e7-9296-61d6ce4dc0d8\"}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/3d3b2140-d4f9-11e7-9296-61d6ce4dc0d8/execute"}}
+Screenshot: available via screen
+
+WebDriverException: Message: {"errorMessage":"'undefined' is not an object (evaluating 'window.Bokeh.documents')","request":{"headers":{"Accept":"application/json","Accept-Encoding":"identity","Connection":"close","Content-Length":"349","Content-Type":"application/json;charset=UTF-8","Host":"127.0.0.1:49159","User-Agent":"Python-urllib/3.6"},"httpVersion":"1.1","method":"POST","post":"{\"script\": \"\\n// add private window prop to check that render is complete\\nwindow._bokeh_render_complete = false;\\nfunction done() {\\n  window._bokeh_render_complete = true;\\n}\\n\\nvar doc = window.Bokeh.documents[0];\\n\\nif (doc.is_idle)\\n  done();\\nelse\\n  doc.idle.connect(done);\\n\", \"args\": [], \"sessionId\": \"3d3b2140-d4f9-11e7-9296-61d6ce4dc0d8\"}","url":"/execute","urlParsed":{"anchor":"","query":"","file":"execute","directory":"/","path":"/execute","relative":"/execute","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/execute","queryKey":{},"chunks":["execute"]},"urlOriginal":"/session/3d3b2140-d4f9-11e7-9296-61d6ce4dc0d8/execute"}}
+Screenshot: available via screen
+     <hr class="docutils"/>
+     <p>
+      <a class="reference external" href="https://raw.githubusercontent.com/pyviz/pyviz/master/examples/03_Customizing_Visual_Appearance.ipynb">
+       Right click to download this notebook from GitHub.
+      </a>
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- END MAIN BODY OF DOCS ––––––––––––– -->
+  <footer class="footer">
+   <div class="footer-links">
+    <ul>
+     <li>
+      <span class="footer-title">
+       Links
+      </span>
+     </li>
+     <li>
+      <a href="index.html">
+       Tutorial
+      </a>
+     </li>
+     <li>
+      <a href="../FAQ.html">
+       FAQ
+      </a>
+     </li>
+     <li>
+      <a href="../about.html">
+       About
+      </a>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <span class="footer-title">
+       Join Us
+      </span>
+     </li>
+     <li>
+      <a href="//gitter.im/ioam/holoviews">
+       Gitter
+      </a>
+     </li>
+     <li>
+      <a href="//github.com/pyviz/pyviz">
+       Github
+      </a>
+     </li>
+    </ul>
+    <ul class="copyright">
+     <li>
+      2017 PyViz authors
+     </li>
+    </ul>
+   </div>
+  </footer>
+  <!-- Google Analytics -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61554933-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!-- MathJax Config -->
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+  </script>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ </body>
+</html>
